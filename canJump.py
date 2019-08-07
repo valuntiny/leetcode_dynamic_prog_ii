@@ -20,22 +20,22 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum
 
 class Solution:
     def canJump(self, nums: 'List[int]') -> 'bool':
-        if not nums:
-            return False
+            if not nums:
+                return False
 
-        n = len(nums) - 1
-        if self.subsearch(nums, n):
-            return True
-        else:
-            return False
+            n = len(nums) - 1
+            if self.subsearch(nums, n):
+                return True
+            else:
+                return False
 
-    def subsearch(self, nums, n):
-        if n == 0:
-            return True
+        def subsearch(self, nums, n):
+            if n == 0:
+                return True
 
-        for i in range(n - 1, -1, -1):
-            if nums[i] >= n - i:
-                return self.subsearch(nums, i)
+            for i in range(n - 1, -1, -1):
+                if nums[i] >= n - i:
+                    return self.subsearch(nums, i)
 
 test = Solution()
 nums = [3,2,1,0,4]
