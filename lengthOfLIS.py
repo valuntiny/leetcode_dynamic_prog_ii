@@ -27,6 +27,7 @@ class Solution:
             else:
                 res[pos] = i
 
+        print(res)
         return len(res)
 
     def binarysearch(self, res, i):
